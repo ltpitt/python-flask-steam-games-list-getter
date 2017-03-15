@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Steam Games List Getter</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js">
+    </script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+    </script>
+</head>
+<body>
+    <div data-role="page" id="menu">
+        <header data-role="header">
+            <h1 class="ui-title" role="heading">Steam Games List Getter</h1>
+            <div class="ui-btn-left">
+                <a data-corners="true" data-icon="home" data-iconpos="notext" data-iconshadow="true" data-role="button" data-shadow="true" data-wrapperels="span" href="" rel="external" title="Home"></a> <a data-corners="true" data-direction="reverse" data-icon="plus" data-iconpos="notext" data-iconshadow="true" data-role="button" data-shadow="true" data-wrapperels="span" href="" id="btn-add-new" rel="external" title="Add new menu item"></a>
+            </div>
+        </header><!-- /header -->
+        <div data-role="content">
+            <label class="ui-hidden-accessible" for="textinput-hide">Text Input:</label>
+            <form action="{{url_for('get_steam_games_owned_by')}}" id="send-username-form" method="post" name="send-username-form" target="_parent">
+                <input id="textinput-hide" name="steam-username" placeholder="Insert your Steam username..." type="text" value="">
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a data-rel="back" data-role="button" data-theme="c" href="#">Cancel</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <button data-role="button" data-theme="b" data-transition="flow" id="btn-add-new-ok" type="submit">Ok</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div><!-- /content -->
+        <div data-role="footer">
+            <h4>Figueiri Soft</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+    <script src="/static/custom.js">
+    </script>
+</body>
+</html>
