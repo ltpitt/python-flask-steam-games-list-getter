@@ -19,6 +19,9 @@
             </div>
         </header><!-- /header -->
         <div data-role="content">
+        <h3>Important information</h3>
+        <p>If, after inserting the username, you just get an empty file please create a custom url for your Steam Profile and put it in the field below</p>
+        <p>Click <a href="https://github.com/ltpitt/python-flask-steam-games-list-getter.git">here</a> to find how</p>
             <label class="ui-hidden-accessible" for="textinput-hide">Text Input:</label>
             <form action="{{url_for('get_steam_games_owned_by')}}" id="send-username-form" method="post" name="send-username-form" target="_parent">
                 <input id="textinput-hide" name="steam-username" placeholder="Insert your Steam username..." type="text" value="">
